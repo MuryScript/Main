@@ -230,9 +230,7 @@ function lib:createWindow(opt)
             for _,s in ipairs(w.active.sections) do
                 for _,it in ipairs(s.items) do
 
-                    if w.search~="" and not string.find(string.lower(it.name),string.lower(w.search)) then
-                        continue
-                    end
+                  if w.search == "" or string.find(string.lower(it.name), string.lower(w.search)) then
 
                     local pos=Vector2.new(w.pos.X+20,y)
 
